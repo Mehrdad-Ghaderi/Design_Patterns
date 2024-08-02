@@ -1,18 +1,16 @@
 package adaptor.headfirst.view;
 
-import adaptor.headfirst.adaptors.DuckAdaptor;
-import adaptor.headfirst.adaptors.TurkeyAdaptor;
-import adaptor.headfirst.duck.Duck;
-import adaptor.headfirst.duck.MallardDuck;
-import adaptor.headfirst.first.duck.*;
-import adaptor.headfirst.turkey.Turkey;
-import adaptor.headfirst.turkey.WildTurkey;
+import adaptor.headfirst.adaptors.*;
+import adaptor.headfirst.duck.*;
+import adaptor.headfirst.turkey.*;
 
 public class DuckApp {
     public static void main(String[] args) {
 
+        //Here a duck and a turkey are created
         Duck mallardDuck = new MallardDuck();
         Turkey wildTurkey = new WildTurkey();
+
 
         Duck turkeyAdaptor = new TurkeyAdaptor(wildTurkey);
         Turkey duckAdaptor = new DuckAdaptor(mallardDuck);
