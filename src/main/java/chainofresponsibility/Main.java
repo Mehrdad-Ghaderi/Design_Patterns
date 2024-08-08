@@ -1,18 +1,19 @@
 package chainofresponsibility;
 
-import chainofresponsibility.derekbanas.Numbers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
+        //Chains are created
         Chain add = new Add();
         Chain subtract = new Subtract();
         Chain multiply = new Multiply();
         Chain divide = new Divide();
 
+        //Chains created abode are passed on as the nextInChain to each class
         add.setNextInChain(subtract);
         subtract.setNextInChain(multiply);
         multiply.setNextInChain(divide);
